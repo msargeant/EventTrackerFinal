@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var eventNameLabel: UILabel!
   
+  @IBOutlet weak var photoImageView: UIImageView!
   
   
   override func viewDidLoad() {
