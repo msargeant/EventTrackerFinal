@@ -13,7 +13,19 @@
 		4248010E216C19F100A782D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4248010D216C19F100A782D6 /* Assets.xcassets */; };
 		42480111216C19F100A782D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4248010F216C19F100A782D6 /* LaunchScreen.storyboard */; };
 		42C68D59216D62A50002E7A8 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C68D58216D62A50002E7A8 /* RatingControl.swift */; };
+		42C68D5B216D92D30002E7A8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C68D5A216D92D30002E7A8 /* Event.swift */; };
+		42C68D65216D9AF40002E7A8 /* EventTrackerFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C68D64216D9AF40002E7A8 /* EventTrackerFinalTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42C68D67216D9AF40002E7A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 424800FB216C19F000A782D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42480102216C19F000A782D6;
+			remoteInfo = EventTrackerFinal;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		42480103216C19F000A782D6 /* EventTrackerFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventTrackerFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		42480110216C19F100A782D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42480112216C19F100A782D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C68D58216D62A50002E7A8 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		42C68D5A216D92D30002E7A8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		42C68D62216D9AF40002E7A8 /* EventTrackerFinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventTrackerFinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C68D64216D9AF40002E7A8 /* EventTrackerFinalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTrackerFinalTests.swift; sourceTree = "<group>"; };
+		42C68D66216D9AF40002E7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		42480100216C19F000A782D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C68D5F216D9AF40002E7A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				42480105216C19F000A782D6 /* EventTrackerFinal */,
+				42C68D63216D9AF40002E7A8 /* EventTrackerFinalTests */,
 				42480104216C19F000A782D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				42480103216C19F000A782D6 /* EventTrackerFinal.app */,
+				42C68D62216D9AF40002E7A8 /* EventTrackerFinalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +84,22 @@
 				42480106216C19F000A782D6 /* AppDelegate.swift */,
 				42480108216C19F000A782D6 /* ViewController.swift */,
 				42C68D58216D62A50002E7A8 /* RatingControl.swift */,
+				42C68D5A216D92D30002E7A8 /* Event.swift */,
 				4248010A216C19F000A782D6 /* Main.storyboard */,
 				4248010D216C19F100A782D6 /* Assets.xcassets */,
 				4248010F216C19F100A782D6 /* LaunchScreen.storyboard */,
 				42480112216C19F100A782D6 /* Info.plist */,
 			);
 			path = EventTrackerFinal;
+			sourceTree = "<group>";
+		};
+		42C68D63216D9AF40002E7A8 /* EventTrackerFinalTests */ = {
+			isa = PBXGroup;
+			children = (
+				42C68D64216D9AF40002E7A8 /* EventTrackerFinalTests.swift */,
+				42C68D66216D9AF40002E7A8 /* Info.plist */,
+			);
+			path = EventTrackerFinalTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +122,24 @@
 			productReference = 42480103216C19F000A782D6 /* EventTrackerFinal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		42C68D61216D9AF40002E7A8 /* EventTrackerFinalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C68D69216D9AF40002E7A8 /* Build configuration list for PBXNativeTarget "EventTrackerFinalTests" */;
+			buildPhases = (
+				42C68D5E216D9AF40002E7A8 /* Sources */,
+				42C68D5F216D9AF40002E7A8 /* Frameworks */,
+				42C68D60216D9AF40002E7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42C68D68216D9AF40002E7A8 /* PBXTargetDependency */,
+			);
+			name = EventTrackerFinalTests;
+			productName = EventTrackerFinalTests;
+			productReference = 42C68D62216D9AF40002E7A8 /* EventTrackerFinalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,10 @@
 				TargetAttributes = {
 					42480102216C19F000A782D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					42C68D61216D9AF40002E7A8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 42480102216C19F000A782D6;
 					};
 				};
 			};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				42480102216C19F000A782D6 /* EventTrackerFinal */,
+				42C68D61216D9AF40002E7A8 /* EventTrackerFinalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42C68D60216D9AF40002E7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,13 +203,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C68D5B216D92D30002E7A8 /* Event.swift in Sources */,
 				42480109216C19F000A782D6 /* ViewController.swift in Sources */,
 				42C68D59216D62A50002E7A8 /* RatingControl.swift in Sources */,
 				42480107216C19F000A782D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42C68D5E216D9AF40002E7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C68D65216D9AF40002E7A8 /* EventTrackerFinalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42C68D68216D9AF40002E7A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42480102216C19F000A782D6 /* EventTrackerFinal */;
+			targetProxy = 42C68D67216D9AF40002E7A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4248010A216C19F000A782D6 /* Main.storyboard */ = {
@@ -316,6 +398,44 @@
 			};
 			name = Release;
 		};
+		42C68D6A216D9AF40002E7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EventTrackerFinalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cvtc.swift.EventTrackerFinalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventTrackerFinal.app/EventTrackerFinal";
+			};
+			name = Debug;
+		};
+		42C68D6B216D9AF40002E7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EventTrackerFinalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cvtc.swift.EventTrackerFinalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventTrackerFinal.app/EventTrackerFinal";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +453,15 @@
 			buildConfigurations = (
 				42480116216C19F100A782D6 /* Debug */,
 				42480117216C19F100A782D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42C68D69216D9AF40002E7A8 /* Build configuration list for PBXNativeTarget "EventTrackerFinalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C68D6A216D9AF40002E7A8 /* Debug */,
+				42C68D6B216D9AF40002E7A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
