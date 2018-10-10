@@ -23,10 +23,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
   // MARK: - Properties
 
   @IBOutlet weak var nameTextField: UITextField!
-  
   @IBOutlet weak var eventNameLabel: UILabel!
-  
   @IBOutlet weak var photoImageView: UIImageView!
+  @IBOutlet weak var ratingControl: RatingControl!
   
   
   override func viewDidLoad() {
@@ -88,11 +87,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     present(imagePickerController, animated: true, completion: nil)
     
     
-  }
-  
-  @IBAction func setDefaultLabelText(_ sender: UIButton) {
-    
-    eventNameLabel.text = "Default Text"
   }
   
 }
