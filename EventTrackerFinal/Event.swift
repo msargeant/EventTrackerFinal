@@ -27,6 +27,7 @@ class Event: NSObject, NSCoding {
   // MARK: Properties
   
   var name: String
+  var date: String
   var photo: UIImage?
   var rating: Int
   
@@ -39,13 +40,14 @@ class Event: NSObject, NSCoding {
   
   struct PropertyKey {
     static let name = "name"
+    static let date = "date"
     static let photo = "photo"
     static let rating = "rating"
   }
   
   // MARK: Initialization
   
-  init?(name: String, photo: UIImage?, rating: Int) {
+  init?(name: String, date: String, photo: UIImage?, rating: Int) {
     
     // The name must not be empty
     guard !name.isEmpty else {
@@ -59,6 +61,7 @@ class Event: NSObject, NSCoding {
     
     // Initialize stored properties.
     self.name = name
+    self.date = date
     self.photo = photo
     self.rating = rating
   }
@@ -66,6 +69,7 @@ class Event: NSObject, NSCoding {
   // MARK: NSCoding
   func encode(with aCoder: NSCoder) {
     aCoder.encode(name, forKey: PropertyKey.name)
+    aCoder.encode(date, forKey: PropertyKey.date)
     aCoder.encode(photo, forKey: PropertyKey.photo)
     aCoder.encode(rating, forKey: PropertyKey.rating)
   }
@@ -73,17 +77,24 @@ class Event: NSObject, NSCoding {
   required convenience init?(coder aDecoder: NSCoder) {
     // The name is required. If we cannot decode a name string, the initializer should fail.
     guard let name = aDecoder.decodeObject(forKey: PropertyKey.name) as? String else {
-      os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
+      os_log("Unable to decode the name for a Event object.", log: OSLog.default, type: .debug)
       return nil
     }
     
-    // Because photo is an optional property of Meal, just use conditional cast.
+    guard let date = aDecoder.decodeObject(forKey: PropertyKey.date) as? String else {
+      os_log("unable to decode the date for a Event object.", log: OSLog.default, type: .debug)
+      return nil
+    }
+    
+    // Because photo is an optional property of Event, just use conditional cast.
     let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage
     
     let rating = aDecoder.decodeInteger(forKey: PropertyKey.rating)
     
+    
+    
     // Must call designated initializer.
-    self.init(name: name, photo: photo, rating: rating)
+    self.init(name: name, date: date, photo: photo, rating: rating)
   }
   
 }

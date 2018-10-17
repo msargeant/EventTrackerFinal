@@ -57,6 +57,7 @@ class EventTableViewController: UITableViewController {
     let event = events[indexPath.row]
 
     cell.nameLabel.text = event.name
+    cell.dateLabel.text = event.date
     cell.photoImageView.image = event.photo
     cell.ratingControl.rating = event.rating
 
@@ -142,15 +143,15 @@ class EventTableViewController: UITableViewController {
     let photo2 = UIImage(named: "event2")
     let photo3 = UIImage(named: "event3")
     
-    guard let event1 = Event(name: "Fun Music Festival", photo: photo1, rating: 4) else {
+    guard let event1 = Event(name: "Fun Music Festival", date: "January 1st, 2019 Wednesday, 5:15 pm", photo: photo1, rating: 4) else {
       fatalError("Unable to instantiate event1")
     }
     
-    guard let event2 = Event(name: "Farmers Market", photo: photo2, rating: 3) else {
+    guard let event2 = Event(name: "Farmers Market", date: "January 1st, 2019 Wednesday, 5:15 pm", photo: photo2, rating: 3) else {
       fatalError("Unable to instantiate event2")
     }
     
-    guard let event3 = Event(name: "Lame Music Festival", photo: photo3, rating: 1) else {
+    guard let event3 = Event(name: "Lame Music Festival", date: "January 1st, 2019 Wednesday, 5:15 pm", photo: photo3, rating: 1) else {
       fatalError("Unable to instantiate event3")
     }
     

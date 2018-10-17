@@ -13,8 +13,10 @@ class EventTableViewCell: UITableViewCell {
   // MARK: Properties
   
   @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var photoImageView: UIImageView!
   
+  @IBOutlet weak var dateLabel: UILabel!
+  
+  @IBOutlet weak var photoImageView: UIImageView!  
   @IBOutlet weak var ratingControl: RatingControl!
   
 

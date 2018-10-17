@@ -24,6 +24,7 @@ class EventViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
   // MARK: - Properties
 
   @IBOutlet weak var nameTextField: UITextField!
+  @IBOutlet weak var dateTextField: UITextField!
   @IBOutlet weak var photoImageView: UIImageView!
   @IBOutlet weak var ratingControl: RatingControl!
   var event: Event?
@@ -35,11 +36,13 @@ class EventViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
 
     // Handle the text field's userinpt through dlegate callbacks.
     nameTextField.delegate = self
+    dateTextField.delegate = self
     
     // Set up views if editing an existing Event.
     if let event = event {
       navigationItem.title = event.name
       nameTextField.text   = event.name
+      dateTextField.text   = event.date
       photoImageView.image = event.photo
       ratingControl.rating = event.rating
     }
@@ -117,11 +120,13 @@ class EventViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     }
     
     let name = nameTextField.text ?? ""
+    let date = dateTextField.text ?? ""
     let photo = photoImageView.image
     let rating = ratingControl.rating
+
     
     // Set the event to be passed to EventTableViewController after the unwind segue.
-    event = Event(name: name, photo: photo, rating: rating)
+    event = Event(name: name, date: date, photo: photo, rating: rating)
   }
   
   

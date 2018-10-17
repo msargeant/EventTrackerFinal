@@ -15,16 +15,16 @@
         <scene sceneID="9Sl-IO-cOn">
             <objects>
                 <tableViewController id="QPf-Gf-H9Q" customClass="EventTableViewController" customModule="EventTrackerFinal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rxn-Aq-NpJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rxn-Aq-NpJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventTableViewCell" rowHeight="90" id="QkR-dy-2qu" customClass="EventTableViewCell" customModule="EventTrackerFinal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventTableViewCell" rowHeight="131" id="QkR-dy-2qu" customClass="EventTableViewCell" customModule="EventTrackerFinal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QkR-dy-2qu" id="ejv-MA-7Pq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="AqM-Ax-EJa">
@@ -39,12 +39,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XUk-IP-sG1" customClass="RatingControl" customModule="EventTrackerFinal" customModuleProvider="target">
-                                            <rect key="frame" x="115" y="40" width="252" height="44"/>
+                                            <rect key="frame" x="115" y="40" width="244" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phu-oO-uV1">
+                                            <rect key="frame" x="16" y="92" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="phu-oO-uV1" id="GtZ-Xe-xUF"/>
                                     <outlet property="nameLabel" destination="2Ay-St-BYL" id="Sfz-Vl-1yH"/>
                                     <outlet property="photoImageView" destination="AqM-Ax-EJa" id="ffH-06-Qfc"/>
                                     <outlet property="ratingControl" destination="XUk-IP-sG1" id="i5n-9x-g5R"/>
@@ -77,8 +85,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GBl-2o-oFw">
-                                <rect key="frame" x="0.0" y="84" width="375" height="410"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GBl-2o-oFw">
+                                <rect key="frame" x="0.0" y="84" width="375" height="454"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIX-FV-dNE">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
@@ -86,8 +94,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-c4-YV8">
+                                        <rect key="frame" x="0.0" y="38" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="GDm-Gl-Azq">
-                                        <rect key="frame" x="27.5" y="38" width="320" height="320"/>
+                                        <rect key="frame" x="27.5" y="76" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GDm-Gl-Azq" secondAttribute="height" multiplier="1:1" id="u8H-df-BUd"/>
@@ -96,12 +110,16 @@
                                             <outletCollection property="gestureRecognizers" destination="GXF-rU-ECA" appends="YES" id="BS9-Je-wRT"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QuW-w6-NPW" customClass="RatingControl" customModule="EventTrackerFinal" customModuleProvider="target">
-                                        <rect key="frame" x="61.5" y="366" width="252" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QuW-w6-NPW" customClass="RatingControl" customModule="EventTrackerFinal" customModuleProvider="target">
+                                        <rect key="frame" x="61.5" y="404" width="252" height="50"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="rtR-c4-YV8" firstAttribute="leading" secondItem="GBl-2o-oFw" secondAttribute="leading" id="4to-JP-4Ck"/>
                                     <constraint firstAttribute="trailing" secondItem="mIX-FV-dNE" secondAttribute="trailing" id="D5C-Q8-8jk"/>
+                                    <constraint firstItem="GDm-Gl-Azq" firstAttribute="top" secondItem="rtR-c4-YV8" secondAttribute="bottom" constant="8" id="TbZ-Fu-ucI"/>
+                                    <constraint firstItem="rtR-c4-YV8" firstAttribute="top" secondItem="mIX-FV-dNE" secondAttribute="bottom" constant="8" id="ldm-sM-bNM"/>
+                                    <constraint firstAttribute="trailing" secondItem="rtR-c4-YV8" secondAttribute="trailing" id="pwq-OK-1eT"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -127,6 +145,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateTextField" destination="rtR-c4-YV8" id="6f6-GJ-nFb"/>
                         <outlet property="nameTextField" destination="mIX-FV-dNE" id="zCj-bH-eXr"/>
                         <outlet property="photoImageView" destination="GDm-Gl-Azq" id="6Ai-C1-ltx"/>
                         <outlet property="ratingControl" destination="QuW-w6-NPW" id="UGp-Y7-zwQ"/>

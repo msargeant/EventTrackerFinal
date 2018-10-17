@@ -37,11 +37,11 @@ class EventTrackerFinalTests: XCTestCase {
   func testMealInitializationSucceeds() {
     
     // Zero rating
-    let zeroRatingEvent = Event.init(name: "Zero", photo: nil, rating: 0)
+    let zeroRatingEvent = Event.init(name: "Zero", date: "One", photo: nil, rating: 0)
     XCTAssertNotNil(zeroRatingEvent)
     
     // Highest positive rating
-    let positiveRatingEvent = Event.init(name: "Positive", photo: nil, rating: 5)
+    let positiveRatingEvent = Event.init(name: "Positive", date: "Negative", photo: nil, rating: 5)
     XCTAssertNotNil(positiveRatingEvent)
     
   }
@@ -50,15 +50,15 @@ class EventTrackerFinalTests: XCTestCase {
   func testEventInitializationFails() {
     
     // Negative rating
-    let negativeRatingEvent = Event.init(name: "Negative", photo: nil, rating: -1)
+    let negativeRatingEvent = Event.init(name: "Negative", date: "Positive", photo: nil, rating: -1)
     XCTAssertNil(negativeRatingEvent)
     
     // Rating exceeds maximum
-    let largeRatingEvent = Event.init(name: "Large", photo: nil, rating: 6)
+    let largeRatingEvent = Event.init(name: "Large", date: "Small", photo: nil, rating: 6)
     XCTAssertNil(largeRatingEvent)
     
     // Empty String
-    let emptyStringEvent = Event.init(name: "", photo: nil, rating: 0)
+    let emptyStringEvent = Event.init(name: "", date: "", photo: nil, rating: 0)
     XCTAssertNil(emptyStringEvent)
   }
   
